@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Standby Mode</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-content">
+        <h1>Standby Mode</h1>
+        <button id="motor-btn">Turn Motor On</button>
+      </div>
+    </div>
+
+    <script>
+      let motorOn = false;
+      const button = document.getElementById("motor-btn");
+
+      button.addEventListener("click", () => {
+        motorOn = !motorOn;
+        button.innerText = motorOn ? "Turn Motor Off" : "Turn Motor On";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Control</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src='static/images/logo.png' alt="Logo" class="logo">
+            <ul>
+                <li><a href="/standby">Standby Mode</a></li>
+                <li><a href="#">Operational Mode</a></li>
+                <li><a href="#">Calibration Mode</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <h1>Motor Control Dashboard</h1>
+            <button onclick="window.location.href='{% url 'standby' %}'">Standby Mode</button>
+            <button>Operational Mode</button>
+            <button>Calibration Mode</button>
+        </div>
+    </div>
+</body>
+</html>
